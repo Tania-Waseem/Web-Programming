@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar Styles */
+/* Secondary Navbar Styles */
+.navbar-nav {
+    display: flex; /* Use flexbox for layout */
+    justify-content: flex-start; /* Align items to the left */
+    padding: 0; /* Remove default padding */
+    list-style-type: none; /* Remove bullet points */
+    flex-direction: row; 
+}
+
+/* Style the individual list items */
+.nav-item {
+    margin-right: 15px; /* Add some spacing between items */
+}
+
+/* General Link Styles */
+.nav-link {
+    color: #333; /* Set default link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-link:hover {
+    text-decoration: none; /* Underline on hover */
+    color: #FF4500; /* Change color on hover */
+}
+
+/* Optional: Active Link Style */
+.nav-link.active {
+    color: #FF4500; /* Highlight active link */
+}
+
+/* Style the individual list items */
+.nav-item {
+    margin-right: 15px; /* Add some spacing between items */
+}
+
+
+.navbar {
+    padding: 10px 20px;
+}
+
+.nav-link {
+    color: #333;
+    margin-right: 20px;
+}
+
+.nav-link.active {
+    color: #FF4500; /* Highlight active link */
+}
+
+/* Hero Section */
+.hero-section {
+    background-color: #ffffff;
+    position: relative;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-section img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    object-fit: cover;
+}
+
+.hero-title {
+    position: absolute;
+    color: #FF4500;
+    font-size: 80px;
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.lead {
+    font-size: 1.2rem;
+}
+
+h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    margin-top: 1.5rem;
+}
+
+p {
+    font-size: 1rem;
+    margin-bottom: 1.2rem;
+}
+
+a.link-primary {
+    color: #0000FF;
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 40px;
+    }
+
+    .hero-section {
+        height: 300px;
+    }
+
+    .hero-section img {
+        max-height: 300px;
+    }
+
+    /* For small screens: display only the 'Menu' in top navbar */
+    .navbar-nav {
+        display: none;
+    }
+    
+    .navbar-collapse.show .navbar-nav {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <title>Job Application Form</title>
+    <link href="NewApplication.css" rel="stylesheet">
+    <script src="NewApplication.js" defer></script>
+</head>
+<body>
+
+<div class="container">
+    <h2 class="text-center">Job Application Form</h2>
+    <form id="applicationForm">
+        <h4>Personal Information</h4>
+        <div class="mb-3">
+            <label for="fullName" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="First Last" required>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="tel" class="form-control" id="phone" placeholder="Enter 11 digit phone number" pattern="[0-9]{11}" required>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="email" placeholder="example@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Street Address" required>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="city" placeholder="City" required>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="state" placeholder="State" required>
+        </div>
+        <div class="mb-3">
+            <input type="text" class="form-control" id="zip" placeholder="ZIP Code" required>
+        </div>
+
+        <h4>Resume and Cover Letter</h4>
+        <div class="mb-3">
+            <label for="resume" class="form-label">Upload Resume</label>
+            <input type="file" class="form-control" id="resume" required>
+        </div>
+        <div class="mb-3">
+            <label for="coverLetter" class="form-label">Cover Letter</label>
+            <textarea class="form-control" id="coverLetter" rows="4" required></textarea>
+        </div>
+
+        <h4>Education</h4>
+        <div class="mb-3">
+            <label for="educationLevel" class="form-label">Highest Level of Education Attained</label>
+            <input type="text" class="form-control" id="educationLevel" required>
+        </div>
+        <div class="mb-3">
+            <label for="schoolName" class="form-label">Name of School/University</label>
+            <input type="text" class="form-control" id="schoolName" required>
+        </div>
+        <div class="mb-3">
+            <label for="major" class="form-label">Major/Area of Study</label>
+            <input type="text" class="form-control" id="major" required>
+        </div>
+        <div class="mb-3">
+            <label for="graduationYear" class="form-label">Graduation Year</label>
+            <input type="number" class="form-control" id="graduationYear" min="2000" max="2100" required placeholder="YYYY">
+        </div>
+
+        <h4>Employment History</h4>
+        <div class="mb-3">
+            <label for="jobTitle" class="form-label">Previous Job Title</label>
+            <input type="text" class="form-control" id="jobTitle" required>
+        </div>
+        <div class="mb-3">
+            <label for="companyName" class="form-label">Company Name</label>
+            <input type="text" class="form-control" id="companyName" required>
+        </div>
+        <div class="mb-3">
+            <label for="employmentDates" class="form-label">Employment Dates</label>
+            <input type="date" class="form-control" id="employmentDates" required>
+        </div>
+        <div class="mb-3">
+            <label for="jobResponsibilities" class="form-label">Job Responsibilities</label>
+            <textarea class="form-control" id="jobResponsibilities" rows="4" required></textarea>
+        </div>
+
+        <h4>Skills</h4>
+        <div class="mb-3">
+            <label for="skills" class="form-label">Relevant Skills</label>
+            <input type="text" class="form-control" id="skills" required>
+        </div>
+
+        <h4>Availability</h4>
+        <div class="mb-3">
+            <label for="startDate" class="form-label">Start Date</label>
+            <input type="date" class="form-control" id="startDate" required>
+            
+        </div>
+        <div class="mb-3">
+            <label for="relocate" class="form-label">Willingness to Relocate</label>
+            <select class="form-select" id="relocate" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="workSchedule" class="form-label">Preferred Work Schedule</label>
+            <select class="form-select" id="workSchedule" required>
+                <option value="" disabled selected>Select</option>
+                <option value="Part-time">Part-time</option>
+                <option value="Full-time">Full-time</option>
+            </select>
+        </div>
+
+        <h4>References</h4>
+        <div class="mb-3">
+            <label for="referenceName" class="form-label">Reference Name</label>
+            <input type="text" class="form-control" id="referenceName" required>
+        </div>
+        <div class="mb-3">
+            <label for="referenceContact" class="form-label">Reference Contact Information</label>
+            <input type="text" class="form-control" id="referenceContact" required>
+        </div>
+        <div class="mb-3">
+            <label for="referenceRelationship" class="form-label">Relationship to Applicant</label>
+            <input type="text" class="form-control" id="referenceRelationship" required>
+        </div>
+
+        <h4>Additional Questions</h4>
+        <div class="mb-3">
+            <label for="whyCompany" class="form-label">Why do you want to work for this company?</label>
+            <textarea class="form-control" id="whyCompany" rows="4" required></textarea>
+        </div>
+
+        <h4>Consent and Agreement</h4>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="terms" required>
+            <label class="form-check-label" for="terms">I agree to the terms and conditions and privacy policy.</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary">Submit Application</button>
+        <button id="viewApplicationsButton" class="btn btn-secondary">View Applications as Table</button>
+
+    </form>
+
+    
+</div>
+</body></html>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
